@@ -1,0 +1,53 @@
+{
+  "shadow": {
+    "none": {
+      "value": "none",
+      "type": "shadow"
+    },
+    "xs": {
+      "value": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+      "type": "shadow",
+      "description": "Sombra muy sutil, para inputs y elementos inline"
+    },
+    "sm": {
+      "value": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1)",
+      "type": "shadow",
+      "description": "Sombra pequeña, para botones y badges"
+    },
+    "md": {
+      "value": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1)",
+      "type": "shadow",
+      "description": "Sombra media, para cards y dropdowns"
+    },
+    "lg": {
+      "value": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1)",
+      "type": "shadow",
+      "description": "Sombra grande, para modales y sidebars"
+    },
+    "xl": {
+      "value": "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)",
+      "type": "shadow",
+      "description": "Sombra extra grande, para overlays flotantes"
+    },
+    "2xl": {
+      "value": "0 25px 50px -12px rgba(0, 0, 0, 0.25)",
+      "type": "shadow",
+      "description": "Sombra máxima, para diálogos prominentes"
+    },
+    "inner": {
+      "value": "inset 0 2px 4px 0 rgba(0, 0, 0, 0.05)",
+      "type": "shadow",
+      "description": "Sombra interior, para inputs activos o estados presionados"
+    },
+    "semantic": {
+      "card":    { "value": "{shadow.md}", "type": "shadow" },
+      "modal":   { "value": "{shadow.xl}", "type": "shadow" },
+      "tooltip": { "value": "{shadow.sm}", "type": "shadow" },
+      "focus": {
+        "value": "0 0 0 3px rgba(37, 99, 235, 0.4)",
+        "type": "shadow",
+        "description": "Ring de foco para accesibilidad (basado en color.primary)"
+      }
+    }
+  }
+}

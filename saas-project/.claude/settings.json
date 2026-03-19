@@ -1,0 +1,52 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(echo:*)",
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(mv:*)",
+      "Bash(npm:*)",
+      "Bash(npx:*)",
+      "Bash(pnpm:*)",
+      "Bash(python:*)",
+      "Bash(pip:*)",
+      "Bash(git:*)",
+      "Bash(node:*)",
+      "Bash(curl:*)",
+      "Bash(grep:*)",
+      "Bash(sed:*)",
+      "Bash(awk:*)",
+      "Bash(jq:*)",
+      "Read(*)",
+      "Write(*)",
+      "Edit(*)",
+      "Task(*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(sudo rm:*)",
+      "Bash(chmod 777:*)"
+    ]
+  },
+  "agents": {
+    "design-system": {
+      "file": ".claude/agents/design-system.md",
+      "scope": ["design-system/**", "skills/design-tokens/**", "skills/component-generator/**"]
+    },
+    "frontend": {
+      "file": ".claude/agents/frontend.md",
+      "scope": ["apps/web/**", "packages/ui/**"]
+    },
+    "backend": {
+      "file": ".claude/agents/backend.md",
+      "scope": ["apps/api/**"]
+    },
+    "devops": {
+      "file": ".claude/agents/devops.md",
+      "scope": [".github/**", "docker-compose*.yml", "Dockerfile*"]
+    }
+  }
+}
