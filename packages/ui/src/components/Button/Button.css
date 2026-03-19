@@ -1,0 +1,102 @@
+/* Button — usa CSS variables del Design System (design-system/tokens/) */
+
+.ui-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2, 8px);
+  border: 1px solid transparent;
+  border-radius: var(--border-radius-md, 6px);
+  font-family: var(--font-family-sans, sans-serif);
+  font-weight: var(--font-weight-medium, 500);
+  line-height: var(--line-height-tight, 1.25);
+  cursor: pointer;
+  transition: background-color 150ms ease, border-color 150ms ease, color 150ms ease, box-shadow 150ms ease;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+}
+
+.ui-button:focus-visible {
+  outline: none;
+  box-shadow: var(--shadow-focus, 0 0 0 3px rgba(37, 99, 235, 0.4));
+}
+
+/* ---------- Sizes ---------- */
+.ui-button[data-size='sm'] {
+  padding: var(--spacing-1-5, 6px) var(--spacing-3, 12px);
+  font-size: var(--font-size-sm, 0.875rem);
+}
+
+.ui-button[data-size='md'] {
+  padding: var(--spacing-2, 8px) var(--spacing-4, 16px);
+  font-size: var(--font-size-base, 1rem);
+}
+
+.ui-button[data-size='lg'] {
+  padding: var(--spacing-3, 12px) var(--spacing-6, 24px);
+  font-size: var(--font-size-lg, 1.125rem);
+}
+
+/* ---------- Variants ---------- */
+.ui-button[data-variant='primary'] {
+  background-color: var(--color-primary-default, #2563eb);
+  color: var(--color-neutral-text-inverse, #ffffff);
+}
+
+.ui-button[data-variant='primary']:hover:not(:disabled) {
+  background-color: var(--color-primary-hover, #1d4ed8);
+}
+
+.ui-button[data-variant='primary']:active:not(:disabled) {
+  background-color: var(--color-primary-active, #1e40af);
+}
+
+.ui-button[data-variant='secondary'] {
+  background-color: var(--color-neutral-surface, #ffffff);
+  color: var(--color-primary-default, #2563eb);
+  border-color: var(--color-primary-default, #2563eb);
+}
+
+.ui-button[data-variant='secondary']:hover:not(:disabled) {
+  background-color: var(--color-primary-subtle, #eff6ff);
+}
+
+.ui-button[data-variant='ghost'] {
+  background-color: transparent;
+  color: var(--color-neutral-text-default, #111827);
+}
+
+.ui-button[data-variant='ghost']:hover:not(:disabled) {
+  background-color: var(--color-neutral-background, #f9fafb);
+}
+
+/* ---------- States ---------- */
+.ui-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.ui-button[data-full-width] {
+  width: 100%;
+}
+
+/* ---------- Loading ---------- */
+.ui-button__spinner {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: ui-spin 0.6s linear infinite;
+  flex-shrink: 0;
+}
+
+.ui-button__label--loading {
+  opacity: 0.7;
+}
+
+@keyframes ui-spin {
+  to { transform: rotate(360deg); }
+}
