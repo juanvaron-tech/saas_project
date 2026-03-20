@@ -18,7 +18,8 @@
   },
   "references": [
     { "path": "./packages/ui" },
-    { "path": "./apps/api" }
+    { "path": "./apps/api" },
+    { "path": "./apps/web" }
   ],
   "exclude": ["node_modules"]
 }
