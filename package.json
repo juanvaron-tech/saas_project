@@ -1,16 +1,19 @@
 {
   "name": "saas-project",
   "private": true,
+  "packageManager": "npm@10.9.2",
   "workspaces": [
     "packages/*",
     "apps/*"
   ],
   "scripts": {
+    "dev": "turbo run dev",
     "build": "npm run build --workspaces --if-present",
     "test": "npm run test  --workspaces --if-present",
     "lint": "npm run lint  --workspaces --if-present"
   },
   "devDependencies": {
+    "turbo": "^2.0.0",
     "@storybook/nextjs": "^10.3.1",
     "@storybook/react": "^10.3.1",
     "@types/jest-axe": "^3.5.9",
@@ -26,6 +29,7 @@
     "clsx": "^2.1.1",
     "react": "^18.3.0",
     "react-dom": "^18.3.0",
-    "tailwind-merge": "^3.5.0"
+    "tailwind-merge": "^3.5.0",
+    "vitest": "4.1.0"
   }
 }
